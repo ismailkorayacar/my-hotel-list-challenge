@@ -13,7 +13,7 @@ Run the project:
 ### `npm start`
 
 
-Execute ### `npm run gulp-build` to run all tasks, launch the browser sync local server and watch for changes.
+Execute `npm run gulp-build` to run all tasks, launch the browser sync local server and watch for changes.
 
 
 
