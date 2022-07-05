@@ -1,0 +1,370 @@
+$container_width: 900px;
+
+div.container { 
+
+    margin: auto; 
+    width: $container_width;
+}
+.position-relative {
+    position: relative; 
+}
+.hotelListWrapper {  
+    article {
+        display: block;
+        .panel {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid transparent; 
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+            box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+        }
+        .panel-default { 
+            border-color: #e5e5e5;
+            .panel-heading {
+                font-size: 1.286rem;
+                color: #003466; 
+                text-decoration: none;  
+                font-weight: 600;
+                background-color: #f5f5f5;
+                border-color: #ddd;
+                h2 {
+                    margin: 0;
+                    display: inline-block;
+                    line-height: 1.42857;
+                    padding: 0;
+                    font-size: 1.286rem;
+                    color: #003466;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+                a {
+                    padding: 0;
+                    font-size: 1.286rem;
+                    color: #003466;
+                    text-decoration: none;
+                    font-weight: 600;
+                    border-bottom: 1px solid transparent;
+                    border-top-right-radius: 3px;
+                    border-top-left-radius: 3px;
+                }
+                .score {
+                    min-width: 110px;
+                    float: right;
+                    height: 38px;
+                    text-align: right;
+                    &.wonderful {
+                        .score__right {
+                            color: #fff;
+                            background-color: #87a52c;
+                        }
+                        .score__left {
+                            .title {
+                                color: #87a52c;
+                            }
+                        }
+                        .score-high-survey {
+                            color: #87a52c;
+                            font-weight: 600;
+                        }
+                    }
+                    &.very-good {
+                        color: #f39c12;
+                        font-weight: 600;
+                        .score-high-survey {
+                            color: #f39c12;
+                            font-weight: 600;
+                        }
+                    }
+                    .score__left {
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 8px;
+                        margin-top: -4px;
+                        .title {
+                            color: #f39c12;
+                            font-size: 1.071rem;
+                            font-weight: 600;
+                        }
+                        .desc {
+                            font-size: .857rem;
+                            color: #969696;
+                        }
+                    }
+                    .score__right {
+                        color: #fff;
+                        font-size: 0.8em;
+                        background-color: #f39c12;
+                        float: right;
+                        width: 20px; 
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        -webkit-border-radius: 4px;
+                        -moz-border-radius: 4px;
+                        -ms-border-radius: 4px;
+                        -o-border-radius: 4px;
+                        border-radius: 4px;
+                        background-clip: padding-box;
+                    }
+                    .score-high-survey {
+                        font-size: 9px;
+                        display: inline-block;
+                        position: absolute;
+                        bottom: -8px;
+                        width: 100%;
+                        right: 0;
+                    }
+                }
+            }
+            .panel-body {
+                position: relative;
+                padding: 0;
+                &:after {
+                    content: " ";
+                    display: table;
+                }
+                &::before {
+                    content: " ";
+                    display: table;
+                }
+                .img-mask {
+                    overflow: hidden;
+                    max-height: 167px;
+                    padding: 0;
+                    .no-src {
+                        &.lazyloaded {
+                            opacity: 1;
+                            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                            filter: alpha(opacity=100);
+                            -webkit-transition: opacity .2s ease-in-out;
+                            -moz-transition: opacity .2s ease-in-out;
+                            -ms-transition: opacity .2s ease-in-out;
+                            -o-transition: opacity .2s ease-in-out;
+                            transition: opacity .2s ease-in-out;
+                        }
+                    }
+                    .fav-btn-list {
+                        padding: 2px;
+                        position: absolute;
+                        top: 10px;
+                        left: 25px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        background-color: #27aae1;
+                        height: 34px;
+                        width: 34px;
+                    }
+                    .badge-list--top-right {
+                        position: absolute;
+                        top: 10px;
+                        right: 25px;
+                    }
+                    .badge-list--bottom-left {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
+                        bottom: 10px;
+                        left: 25px;
+                        .badge-list__item {
+                            display: flex;
+                            align-items: center;
+                            height: 20px;
+                            padding: 3px;
+                            border-radius: 2px;
+                            line-height: 20px;
+                            &.badge-list__item--payathotel {
+                                background-color: #fa6400;
+                            }
+                            &.badge-list__item--covid {
+                                background-color: #71c684;
+                            }
+                            span {
+                                font-size: 11px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .otel-list__content {
+                    position: relative;
+                    padding: 10px 0;
+                    -webkit-flex-direction: column;
+                    -moz-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    min-height: 167px;
+                    p {
+                        margin: 0 0 2px;
+                        color: #003466;
+                        font-size: 1em;
+                    }
+                    .erk-promo {
+                        font-size: 1em;
+                        color: #ffc652;
+                        font-weight: 600;
+                        margin-top: 5px;
+                    }
+                    .axess-campaign {
+                        padding: 0 6px;
+                        line-height: 165%;
+                        display: inline-block;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        -ms-border-radius: 3px;
+                        -o-border-radius: 3px;
+                        border-radius: 3px;
+                        border: 1px solid #e74c3c;
+                        color: #e74c3c;
+                        font-size: .786rem;
+                        margin-top: 5px;
+                        margin-right: 5px;
+                        position: relative;
+                        cursor: pointer;
+                    }
+                    .free-cancellation-info {
+                        display: inline-flex;
+                        align-items: center;
+                        max-width: 110px;
+                        margin-top: 5px;
+                        font-size: 14px;
+                        color: #0d3466;
+                        img {
+                            max-width: 14px;
+                            margin-right: 5px;
+                        }
+                    }
+                    .hotelFeatures {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        margin-top: auto;
+                        .hotelFeaturesList {
+                            width: 100%;
+                            height: 21px;
+                            display: block;
+                            list-style: none;
+                            padding: 0;
+                            .hotelFeaturesList__hotelFeaturesTooltip {
+                                width: 33.33333%;
+                                height: 21px;
+                                line-height: 21px;
+                                float: left;
+                                margin: 2px 0 0;
+                                padding: 0 0 0 2px;
+                                text-align: left;
+                                color: #566b80;
+                                font-size: 0.8em;
+                                -webkit-border-radius: 3px 3px 3px 3px;
+                                -moz-border-radius: 3px 3px 3px 3px;
+                                -ms-border-radius: 3px 3px 3px 3px;
+                                -o-border-radius: 3px 3px 3px 3px;
+                                border-radius: 3px 3px 3px 3px;
+                                background-clip: padding-box;
+                                cursor: default;
+                                white-space: nowrap;
+                                &.cocukdostu {
+                                    i {
+                                        background-position: -42px -43px;
+                                    }
+                                }
+                                &.miniclub {
+                                    i {
+                                        background-position: -63px 0;
+                                    }
+                                }
+                                &.sukaydiragi  {
+                                    i {
+                                        background-position: -22px 0;
+                                    }
+                                }
+                                &.spavesaglik  {
+                                    i {
+                                        background-position: -126px 0;
+                                    }
+                                }
+                                &.restoran  {
+                                    i {
+                                        background-position: -105px -1px;
+                                    }
+                                }
+                                .hotelFeaturesTooltip-icon {
+                                    width: 21px;
+                                    height: 21px;
+                                    float: left;
+                                    margin-right: 5px;
+                                    display: block;
+                                    background-image: url(/images/icon/hotelFeatures.png);
+                                    background-size: 0 0 no-repeat;
+                                    -webkit-background-size: 0 0 no-repeat;
+                                    -moz-background-size: 0 0 no-repeat;
+                                    -o-background-size: 0 0 no-repeat;
+                                    -ms-background-size: 0 0 no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+                .otel-list__price-box {
+                    border-left: 1px dashed #e5e5e5;
+                    min-height: 163px;
+                    text-align: center;
+                    -webkit-justify-content: center;
+                    -moz-justify-content: center;
+                    -ms-justify-content: center;
+                    justify-content: center;
+                    -ms-flex-pack: center;
+                    -webkit-align-items: center;
+                    -moz-align-items: center;
+                    -ms-align-items: center;
+                    align-items: center;
+                    .otel-list__price-box__content {
+                        display: block;
+                        .hostel-type {
+                            color: #003466;
+                            font-weight: 600;
+                        }
+                        .currency {
+                            font-size: 1em;
+                            color: #969696;
+                            font-weight: 600;
+                            position: relative;
+                            display: inline-block;
+                            .price-currency {
+                                font-size: 1em;
+                            }
+                            &:before {
+                                position: absolute;
+                                content: "";
+                                left: 0;
+                                top: 50%;
+                                right: 0;
+                                border-top: 1px solid;
+                                border-color: inherit;
+                                -moz-transform: rotate(-5deg);
+                                -o-transform: rotate(-5deg);
+                                -ms-transform: rotate(-5deg);
+                                -webkit-transform: rotate(-5deg);
+                                transform: rotate(-5deg);
+                            }
+                        }
+                        .discount-price {
+                            font-size: 1.429rem;
+                            color: #003466;
+                            font-weight: 700;
+                            .price-currency {
+                                font-size: 1em;
+                            }
+                        }
+                        .btn {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
